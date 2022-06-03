@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Assignment-1</title>
+    <script>
+        window.addEventListener('load',function(){
+            document.getElementById('btn').onclick=function(){
+        alert('Hello Everyone!');
+    }
+    document.getElementById('btn-1').addEventListener("click",function () {
+        alert("My button");
+
+    })
+        });
+
+    </script>
+</head>
+<body>
+    <!-- inline  -->
+    <button id="btn">Click ME</button>
+    <!-- dom -->
+    <button onclick="alert('Hey There')">Clicked ME</button>
+    <!-- add event listener -->
+    <button id="btn-1">My Button</button>
+</body>
+<!-- <script>
+    document.getElementById('btn').onclick=function(){
+        alert('Hello Everyone!');
+    }
+    document.getElementById('btn-1').addEventListener("click",function () {
+        alert("My button");
+
+    })
+</script> -->
+</html>
