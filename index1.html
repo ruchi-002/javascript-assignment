@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-1</title>
+</head>
+<body>
+    <div onClick="changecolor()" id="myDiv" style="background-color: blue; padding: 20px; margin: 10px;">Hey There!</div>
+    <!-- or another way -->
+    <div id="myDiv1" onclick="" style="background-color: red; padding: 20px; margin: 10px;">Hello Everyone!</div>
+    <script>
+        function changecolor(){
+            document.getElementById('myDiv').style.backgroundColor="red";
+        }
+        document.getElementById("myDiv1").onclick=function(e){
+            e.target.style.backgroundColor="blue";
+        }
+    </script>
+</body>
+</html>
