@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handler</title>
+    <style>
+        div{
+            margin: 50px 50px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+      #div1{
+          width: 25vw;
+          height: 25vh;
+          background-color: gold;
+      }
+      #div2{
+        width: 15vw;
+          height: 15vh;
+          background-color:hotpink;
+      }
+      #div3{
+          width: 10vw;
+          height: 10vh;
+          background-color: green;
+      }
+    </style>
+   
+</head>
+<body>
+    <div id="div1" onclick="parentCall()">
+    
+        <div id="div2" onclick="child1Call()">
+            
+            <div id="div3" onclick="child2Call()">
+               
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+    //     window.onload=function(){
+    //         document.getElementById("div3").onclick=function(){
+    //             alert("div3");
+               
+    //         }
+    //         document.getElementById("div2").onclick=function(e){
+    //             alert("div2");
+    //             e.stopImmediatePropagation();
+    //             e.preventDefault();
+
+    //         }
+    //         document.getElementById("div1").onclick=function(){
+    //             alert("div1");
+    //         }
+
+    //  }
+         const parentCall=()=>{
+                alert('parent call');
+            }
+            const child1Call=()=>{
+                alert("child 1 call");
+            }
+            const child2Call=()=>{
+                alert("child 2 call");
+                event.stopPropagation();
+            }
+    </script>
+</body>
+</html>
